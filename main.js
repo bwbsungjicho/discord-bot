@@ -17,6 +17,13 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
+    if (command === 'help') {
+        message.channel.send('-ping');
+        message.channel.send('-f');
+        message.channel.send('-event');
+        message.channel.send('-die');
+    }
+    
     if (command === 'ping') {
         message.channel.send('pong!');
     }
