@@ -23,8 +23,8 @@ client.on('message', message => {
     if (command === 'f') {
         message.channel.send(message.author.username + " has paid their respect");
     }
-    if (command === 'die') {
-        message.channel.send("No thanks.");
+    if (command === 'event' || command === 'events') {
+        message.channel.send("There are no events right now.");
     }
 });
 
