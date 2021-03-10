@@ -23,6 +23,9 @@ client.on('message', message => {
     if (command === 'f') {
         message.channel.send(message.author.username + " has paid their respect");
     }
+    if (command === 'screw you') {
+        message.channel.send("No thanks.");
+    }
 });
 
 client.login(process.env.token);
