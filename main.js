@@ -22,18 +22,13 @@ client.on('message', message => {
         message.channel.send('-f');
         message.channel.send('-event');
         message.channel.send('-die');
-    }
-    
-    if (command === 'ping') {
+    } else if (command === 'ping') {
         message.channel.send('pong!');
-    }
-    if (command === 'f') {
+    } else if (command === 'f') {
         message.channel.send(message.author.username + " has paid their respect");
-    }
-    if (command === 'event' || command === 'events') {
+    } else if (command === 'event' || command === 'events') {
         message.channel.send("There are no events right now.");
-    }
-    if (command === 'die') {
+    } else if (command === 'die please') {
         message.channel.send("No u");
     }
 });
