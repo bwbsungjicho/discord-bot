@@ -23,7 +23,7 @@ client.on('message', message => {
     if (command === 'f') {
         message.channel.send(message.author.username + " has paid their respect");
     }
-    if (command === 'screw you') {
+    if (command === 'die') {
         message.channel.send("No thanks.");
     }
 });
