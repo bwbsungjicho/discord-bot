@@ -25,7 +25,7 @@ client.on('message', message => {
     }
 
     if (command === 'test') {
-        message.channel.send("~striked?~");
+        message.channel.send("~~striked?~~");
     }
     if (command === 'ping') {
         message.channel.send('pong!');
