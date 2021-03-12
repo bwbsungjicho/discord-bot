@@ -23,7 +23,10 @@ client.on('message', message => {
         message.channel.send('-event');
         message.channel.send('-die');
     }
-    
+
+    if (command === 'test') {
+        message.channel.send("~striked?~");
+    }
     if (command === 'ping') {
         message.channel.send('pong!');
     }
