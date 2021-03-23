@@ -25,7 +25,7 @@ client.on('message', message => {
     }
 
     if (command === 'test') {
-        new Discord.MessageEmbed().setTitle('Title testing');
+        message.channel.send(new Discord.MessageEmbed().setTitle('Title testing'));
     }
     if (command === 'ping') {
         message.channel.send('pong!');
