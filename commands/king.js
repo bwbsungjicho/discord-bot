@@ -1,5 +1,5 @@
 module.exports = {
-	name: '',
+	name: 'king',
 	description: '',
 	execute(message, args) {
 		if (message.member.roles.cache.has('689743413884879012')) {
