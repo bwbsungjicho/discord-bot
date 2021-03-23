@@ -1,6 +1,6 @@
 {
   "name": "discordbot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "event planning bot",
   "main": "main.js",
   "scripts": {
@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwbsungjicho/discord-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bwbsungjicho/discord-bot/issues"
+  },
+  "homepage": "https://github.com/bwbsungjicho/discord-bot#readme"
 }
