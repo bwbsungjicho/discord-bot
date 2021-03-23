@@ -17,11 +17,6 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    const exampleEmbed = new Discord.MessageEmbed()
-        .setTitle("Title testing")
-        .setDescription("Testing if embeds are working")
-        ;
-
     if (command === 'help') {
         message.channel.send('-ping');
         message.channel.send('-f');
@@ -30,8 +25,7 @@ client.on('message', message => {
     }
 
     if (command === 'test') {
-        channel.send("The function worked");
-        channel.send(exampleEmbed);
+        channel.send("Maybe it didn't work")
     }
     if (command === 'ping') {
         message.channel.send('pong!');
