@@ -37,6 +37,9 @@ client.on('message', message => {
     if (command === 'event' || command === 'events') {
         message.channel.send("There are no events right now.");
     }
+    if (command === 'king') {
+        client.commands.get('king').execute(message, args);
+    }
 });
 
 client.login(process.env.token);
