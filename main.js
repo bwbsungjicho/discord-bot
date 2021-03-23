@@ -17,6 +17,11 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
+    const exampleEmbed = new Discord.MessageEmbed()
+        .setTitle("Title testing")
+        .setDescription("Testing if embeds are working")
+        ;
+
     if (command === 'help') {
         message.channel.send('-ping');
         message.channel.send('-f');
@@ -25,7 +30,7 @@ client.on('message', message => {
     }
 
     if (command === 'test') {
-        message.channel.send(new Discord.MessageEmbed().setTitle('Title testing'));
+        channel.send(exampleEmbed);
     }
     if (command === 'ping') {
         message.channel.send('pong!');
