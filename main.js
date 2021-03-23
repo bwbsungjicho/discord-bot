@@ -30,6 +30,7 @@ client.on('message', message => {
     }
 
     if (command === 'test') {
+        channel.send("The function worked");
         channel.send(exampleEmbed);
     }
     if (command === 'ping') {
