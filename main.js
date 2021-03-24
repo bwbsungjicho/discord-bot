@@ -40,6 +40,9 @@ client.on('message', message => {
     if (command === 'king') {
         client.commands.get('king').execute(message, args);
     }
+    if (command === 'help') {
+        client.commands.get('help').execute(message, args, Discord);
+    }
 });
 
 client.login(process.env.token);
