@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
+const fs = require('fs');
 const client = new Discord.Client();
 const prefix = '-';
-const fs = require('fs');
+
 client.commands = new Discord.Collection();
 
 //reads js files and js files only from the command folder
