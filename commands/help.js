@@ -4,6 +4,7 @@ module.exports = {
 	execute(message, args, Discord) {
 		let newEmbed = new Discord.MessageEmbed()
 			.setTitle('Commands')
+			.thumbnail(url: 'file:///C:/Users/minec/Downloads/spoooky%20scary%20skeleton%20gif.gif')
 			.setDescription('Available commands')
 			.addFields(
 				{ name: "-ping", value: "Makes the bot say pong" },
