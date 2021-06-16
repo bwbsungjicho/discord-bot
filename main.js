@@ -53,7 +53,7 @@ client.on('message', message => {
         client.commands.get('help').execute(message, args, Discord);
     }
     if (command === 'peasant') {
-        client.commands.get('king').execute(message, args, Discord);
+        client.commands.get('peasant').execute(message, args, Discord);
     }
 });
 
