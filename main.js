@@ -48,6 +48,8 @@ client.on('message', message => {
     }
     if (command === 'event' || command === 'events') {
         message.channel.send("There are no events right now.");
+    if (command === 'event') {
+        client.commands.get('event').execute(message, args, Discord);
     }
     if (command === 'help') {
         client.commands.get('help').execute(message, args, Discord);
