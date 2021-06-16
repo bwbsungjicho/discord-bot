@@ -33,50 +33,49 @@ client.once('ready', () => {
 
 //Commands handler
 module.exports = async (Discord, client, message) => {
-    client.on('message', message => {
-        //checks if it is sent with a prefix or if it's sent by a bot
-        if (!message.content.startsWith(prefix) || message.author.bot) {
-            return;
-        }
+    //checks if it is sent with a prefix or if it's sent by a bot
+    if (!message.content.startsWith(prefix) || message.author.bot) {
+        return;
+    }
 
-        //slices the commands at every space bar so you can enter multiple comnmands in a single line
-        const args = message.content.slice(prefix.length).split(/ +/);
-        const command = args.shift().toLowerCase();
+    //creating new profile when interacting with the bot
+    let profileData;
+    try {
+        profileData = await profileModel.fineOne({ userID: message.author.id });
+        if (!profileData) {
+            let profile = await profileModel.create({
+                userID: message.author.id,
+                serverID: message.guild.id,
+                coins: 1000,
+                bank: 0
+            });
+            profile.save();
+        }
+    } catch (err) {
+        console.log(err);
+        message.channel.send("Error occured in database");
+    }
 
-        //creating new profile when interacting with the bot
-        let profileData;
-        try {
-            profileData = await profileModel.fineOne({ userID: message.author.id });
-            if (!profileData) {
-                let profile = await profileModel.create({
-                    userID: message.author.id,
-                    serverID: message.guild.id,
-                    coins: 1000,
-                    bank: 0
-                });
-                profile.save();
-            }
-        } catch (err) {
-            console.log(err);
-            message.channel.send("Error occured in database");
-        }
+    //slices the commands at every space bar so you can enter multiple comnmands in a single line
+    const args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
 
-        //The command section
-        if (command === 'ping') {
-            client.commands.get('ping').execute(message, args);
-        }
-        if (command === 'f') {
-            message.channel.send(message.author.username + " has paid their respect");
-        }
-        if (command === 'event' || command === 'events') {
-            message.channel.send("There are no events right now.");
-        }
-        if (command === 'help') {
-            client.commands.get('help').execute(message, args, Discord);
-        }
-        if (command === 'peasant') {
-            client.commands.get('peasant').execute(message, args, Discord);
-        }
-    });
+
+    //The command section
+    if (command === 'ping') {
+        client.commands.get('ping').execute(message, args);
+    }
+    if (command === 'f') {
+        message.channel.send(message.author.username + " has paid their respect");
+    }
+    if (command === 'event' || command === 'events') {
+        message.channel.send("There are no events right now.");
+    }
+    if (command === 'help') {
+        client.commands.get('help').execute(message, args, Discord);
+    }
+    if (command === 'peasant') {
+        client.commands.get('peasant').execute(message, args, Discord);
+    }
 };
 client.login(process.env.token);
