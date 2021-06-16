@@ -1,9 +1,9 @@
 module.exports = {
-	name: 'king',
+	name: 'peasant',
 	description: '',
 	execute(message, args) {
-		if (message.member.roles.cache.has('689743413884879012')) {
-			message.channel.send("YOU'RE SECSY OH DADDY");
+		if (message.member.roles.cache.has('436731456593854466')) {
+			message.channel.send("U HAVE TINY PP U PEASANT");
 		} else {
 			message.channel.send("You suck cuz your're not a king");
         }

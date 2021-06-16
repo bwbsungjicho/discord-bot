@@ -52,6 +52,9 @@ client.on('message', message => {
     if (command === 'help') {
         client.commands.get('help').execute(message, args, Discord);
     }
+    if (command === 'peasant') {
+        client.commands.get('king').execute(message, args, Discord);
+    }
 });
 
 client.login(process.env.token);
