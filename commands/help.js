@@ -10,7 +10,7 @@ module.exports = {
 			.addFields(
 				{ name: "```ping```", value: "Makes the bot say pong", inline: true},
 				{ name: "```f```", value: "If you wanna pay your respects", inline: true },
-				{ name: "```king```", value: "Only cool people can use this command", inline: true }
+				{ name: "```king```", value: "Only cool people can use this command (This command doesn't work)", inline: true }
 			)
 			.setFooter('This is a foot');
 
