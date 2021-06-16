@@ -2,8 +2,9 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const mongoose = require('mongoose');
 const client = new Discord.Client();
+const prefix = "-";
 
-mongoose.connect("mongodb+srv://kirbystar1234:pikmingarden1234@eventplannerbot.5xmcy.mongodb.net/eventPlannerDB?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://adminUser:ihavecripplingdepression@eventplannerbot.a1ook.mongodb.net/eventPlannerDB?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
@@ -30,7 +31,7 @@ client.once('ready', () => {
 
 client.on('message', message => {
     //checks if it is sent with a prefix or if it's sent by a bot
-    if (!message.content.startsWith(process.env.PREFIX) || message.author.bot) {
+    if (!message.content.startsWith(prefix) || message.author.bot) {
         return;
     }
 
@@ -57,4 +58,3 @@ client.on('message', message => {
 });
 
 client.login(process.env.token);
-client.login('ODE4NzMzNTg2MTA1NDk5Njc4.YEcXEg.uq - ddfrDXGEXIXg1vcRCKKMYvn8');
