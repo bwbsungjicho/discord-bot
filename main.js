@@ -3,7 +3,7 @@ const fs = require('fs');
 const mongoose = require('mongoose');
 const client = new Discord.Client();
 const prefix = "-";
-const profileModel = require('../discord-bot/models/profileSchema');
+const profileModel = require('./models/profileSchema');
 
 //logs into the mongo database
 mongoose.connect("mongodb+srv://adminUser:ihavecripplingdepression@eventplannerbot.a1ook.mongodb.net/realEventPlannerDB?retryWrites=true&w=majority", {
@@ -53,7 +53,7 @@ module.exports = async (Discord, client, message) => {
         }
     } catch (err) {
         console.log(err);
-        message.channel.send("Error occured in database");
+        console.log("error occured in database")
     }
 
     //slices the commands at every space bar so you can enter multiple comnmands in a single line
