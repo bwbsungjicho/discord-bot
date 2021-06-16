@@ -3,7 +3,7 @@ const fs = require('fs');
 const mongoose = require('mongoose');
 const client = new Discord.Client();
 const prefix = "-";
-const profileModel = require('../models/profileSchema');
+const profileModel = require('../discord-bot/models/profileSchema');
 
 //logs into the mongo database
 mongoose.connect("mongodb+srv://adminUser:ihavecripplingdepression@eventplannerbot.a1ook.mongodb.net/realEventPlannerDB?retryWrites=true&w=majority", {
