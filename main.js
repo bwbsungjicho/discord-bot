@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const client = new Discord.Client();
 const prefix = "-";
 
-mongoose.connect("mongodb+srv://adminUser:ihavecripplingdepression@eventplannerbot.a1ook.mongodb.net/eventPlannerDB?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://adminUser:ihavecripplingdepression@eventplannerbot.a1ook.mongodb.net/realEventPlannerDB?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
