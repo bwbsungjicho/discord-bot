@@ -1,3 +1,4 @@
+//takes the schema model from the profileSchema.js file, and uses it in here
 const profileModel = require('../models/profileSchema');
 
 module.exports = async (client, discord, member) => {

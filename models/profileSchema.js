@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//creates a template for the database
 const profileSchema = new mongoose.Schema({
     userID: { type: String, require: true, unique: true },
     serverID: { type: String, require: true },
