@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'help',
 	description: 'command used to display other commands',
-	execute(message, args, Discord) {
+	execute(client, message, args, Discord) {
 		let newEmbed = new Discord.MessageEmbed()
 			.setColor('#fcb603')
 			.setTitle('Command list')
@@ -15,5 +15,6 @@ module.exports = {
 			.setFooter('This is a foot');
 
 		message.channel.send(newEmbed);
+		console.log("help command called");
 	}
 }

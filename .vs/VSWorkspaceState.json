@@ -1,8 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\commands"
+    "\\commands",
+    "\\events",
+    "\\events\\client",
+    "\\events\\guild",
+    "\\handlers",
+    "\\models"
   ],
-  "SelectedNode": "\\main.js",
+  "SelectedNode": "\\models\\profileSchema.js",
   "PreviewInSolutionExplorer": false
 }
