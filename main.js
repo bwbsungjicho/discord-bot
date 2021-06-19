@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const mongoose = require('mongoose');
 const client = new Discord.Client();
-const profileModel = require('./models/profileSchema');
 
 //logs into the mongo database
 mongoose.connect("mongodb+srv://adminUser:ihavecripplingdepression@eventplannerbot.a1ook.mongodb.net/eventPlannerDB?retryWrites=true&w=majority", {
