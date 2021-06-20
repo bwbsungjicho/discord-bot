@@ -4,7 +4,7 @@ module.exports = {
 	name: 'remove',
 	aliases: ['delete'],
 	description: 'delete an event',
-	async execute(client, message, cmd, args, Discord, profileData, eventData) {
+	async execute(client, message, cmd, args, Discord, eventData) {
 
 		eventModel.findOneAndDelete({
 			hostUsername: message.author.username,

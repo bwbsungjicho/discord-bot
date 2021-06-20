@@ -2,7 +2,7 @@ module.exports = {
 	name: 'event',
 	aliases: ['events'],
 	description: 'viewing an event',
-	async execute(client, message, cmd, args, Discord, profileData, eventData, eventCount) {
+	async execute(client, message, cmd, args, Discord, eventData, eventCount) {
 
 		//checks whether there is an event
 		if (eventData[0]) {

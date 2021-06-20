@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'help',
 	description: 'command used to display other commands',
-	execute(client, message, cmd, args, Discord, profileData) {
+	execute(client, message, cmd, args, Discord) {
 		//creates a new embed
 		let newEmbed = new Discord.MessageEmbed()
 			.setColor('#00FFFF')

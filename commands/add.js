@@ -4,7 +4,7 @@ module.exports = {
 	name: 'add',
 	aliases: ['create', 'addEvent',],
 	description: 'creating an event',
-	async execute(client, message, cmd, args, Discord, profileData, eventData) {
+	async execute(client, message, cmd, args, Discord, eventData) {
 		console.log("a user is about to make an event!");
 		//checks to make sure its the same author thats talking throughout the code
 		//so that it doesn't get 'interrupted' by other people using the bot
