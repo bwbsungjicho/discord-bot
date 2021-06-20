@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const client = new Discord.Client();
 
 //logs into the mongo database
+console.log("attemping to log into mongoose");
 mongoose.connect(process.env.dbPassword, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
