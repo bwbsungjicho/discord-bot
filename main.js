@@ -25,4 +25,4 @@ client.events = new Discord.Collection();
 });
 
 //logs into the discord bot
-client.login('ODE4NzMzNTg2MTA1NDk5Njc4.YEcXEg.9cuf4wqnceySKO2LdUPPtTa9hEc');
+client.login(process.env.token);

@@ -21,7 +21,7 @@ module.exports = {
 				message.channel.send(embed);
             }
 		} else {
-			message.channel.send(process.env.token);
+			message.channel.send("There are no events right now.");
         }
 	}
 }
