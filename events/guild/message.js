@@ -1,4 +1,5 @@
 const profileModel = require("../../models/profileSchema");
+const eventModel = require("../../models/eventSchema");
 
 module.exports = async (Discord, client, message) => {
     const prefix = '-';
@@ -31,11 +32,22 @@ module.exports = async (Discord, client, message) => {
         console.log(err);
     }
 
+    let eventData;
+    try {
+        eventData = await eventModel.find();
+        eventCount = await eventModel.find().count();
+        console.log(eventData);
+        console.log(eventCount);
+    } catch (err) {
+        console.log(err);
+    }
+    
+
     //slices the commands at every space bar so you can enter multiple comnmands in a single line
     const args = message.content.slice(prefix.length).split(/ +/);
     const cmd = args.shift().toLowerCase();
 
     const command = client.commands.get(cmd) || client.commands.find(a => a.aliases && a.aliases.includes(cmd));
 
-    if (command) command.execute(client, message, cmd, args, Discord, profileData);
+    if (command) command.execute(client, message, cmd, args, Discord, profileData, eventData, eventCount);
 };

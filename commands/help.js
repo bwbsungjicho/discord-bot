@@ -3,14 +3,14 @@ module.exports = {
 	description: 'command used to display other commands',
 	execute(client, message, cmd, args, Discord, profileData) {
 		let newEmbed = new Discord.MessageEmbed()
-			.setColor('#fcb603')
+			.setColor('#00FFFF')
 			.setTitle('Command list')
 			.setThumbnail ('https://i.imgur.com/5DVyCdP.gif')
 			.setDescription('The command prefix is -')
 			.addFields(
-				{ name: "```ping```", value: `fuck`, inline: true},
-				{ name: "```f```", value: "If you wanna pay your respects", inline: true },
-				{ name: "```king```", value: "Only cool people can use this command (This command doesn't work)", inline: true }
+				{ name: "```create/add```", value: `Create an event`, inline: true},
+				{ name: "```delete/remove```", value: "Delete an event (Must provide an event ID and be the host of that event", inline: true },
+				{ name: "```event```", value: "View all the avaliable events", inline: true }
 			)
 			.setFooter('This is a foot');
 
