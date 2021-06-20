@@ -38,7 +38,7 @@ module.exports = async (Discord, client, message) => {
         //it sets eventData to the values of the entries in the eventModel database
         eventData = await eventModel.find();
         //counts the amount of entries in the eventModel database
-        eventCount = await eventModel.find().count();
+        eventCount = await eventModel.collection.countDocuments();
     } catch (err) {
         console.log(err);
     }
