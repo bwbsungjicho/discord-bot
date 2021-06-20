@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const client = new Discord.Client();
 
 //logs into the mongo database
-mongoose.connect("mongodb+srv://adminUser:ihavecripplingdepression@eventplannerbot.a1ook.mongodb.net/eventPlannerDB?retryWrites=true&w=majority", {
+mongoose.connect(process.env.dbPassword, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
@@ -25,4 +25,4 @@ client.events = new Discord.Collection();
 });
 
 //logs into the discord bot
-client.login('ODE4NzMzNTg2MTA1NDk5Njc4.YEcXEg.Aqe1K4M_w27qZf7dsxTGiOxayyQ');
+client.login(process.env.token);
