@@ -7,7 +7,7 @@ module.exports = {
 		//checks whether there is an event
 		if (eventData[0]) {
 			//loops through the amount of events to create a new embed message for each events
-			for (let i = 0; i < eventCount + 1; i++) {
+			for (let i = 0; i < eventCount; i++) {
 				//randomises color by getting a random decimal and converting it into hexadecimal
 				randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
 				//creates a new embed
