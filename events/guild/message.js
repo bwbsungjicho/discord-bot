@@ -32,12 +32,13 @@ module.exports = async (Discord, client, message) => {
         console.log(err);
     }
 
+    //creates a new variable called eventData
     let eventData;
     try {
+        //it sets eventData to the values of the entries in the eventModel database
         eventData = await eventModel.find();
+        //counts the amount of entries in the eventModel database
         eventCount = await eventModel.find().count();
-        console.log(eventData);
-        console.log(eventCount);
     } catch (err) {
         console.log(err);
     }

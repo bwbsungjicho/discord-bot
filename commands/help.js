@@ -2,6 +2,7 @@ module.exports = {
 	name: 'help',
 	description: 'command used to display other commands',
 	execute(client, message, cmd, args, Discord, profileData) {
+		//creates a new embed
 		let newEmbed = new Discord.MessageEmbed()
 			.setColor('#00FFFF')
 			.setTitle('Command list')
@@ -14,7 +15,7 @@ module.exports = {
 			)
 			.setFooter('This is a foot');
 
+		//sends this newly created embed to the channel as a message
 		message.channel.send(newEmbed);
-		console.log("help command called");
 	}
 }
